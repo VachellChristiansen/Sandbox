@@ -3,8 +3,11 @@ const app = express();
 
 app.set("view engine", "ejs");
 
-app.get('/', (req, res) => {
-  res.render('index')
+app.get("/", async (req, res, next) => {
+  return res.status(200).json({
+    title: "Express Testing",
+    message: "The app is working properly!",
+  });
 });
 
 app.listen(8080, () => {
