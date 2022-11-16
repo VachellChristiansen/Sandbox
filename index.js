@@ -1,15 +1,14 @@
+// Import packages
 const express = require("express");
+const home = require("./routes/home");
+
+// Middlewares
 const app = express();
+app.use(express.json());
 
-app.set("view engine", "ejs");
+// Routes
+app.use("/home", home);
 
-app.get("/", async (req, res, next) => {
-  return res.status(200).json({
-    title: "Express Testing",
-    message: "The app is working properly!",
-  });
-});
-
-app.listen(8080, () => {
-  console.log("listening on port 8080");
-});
+// connection
+const port = process.env.PORT || 9001;
+app.listen(port, () => console.log(`Listening to port ${port}`));
