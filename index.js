@@ -1,11 +1,10 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
+app.set("view engine", "ejs");
+
 app.get('/', (req, res) => {
-  res.json({
-    "status": "OK",
-    "message": "Success!"
-  });
+  res.render('index')
 });
 
 app.listen(8080, () => {
