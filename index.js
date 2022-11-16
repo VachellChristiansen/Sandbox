@@ -1,5 +1,6 @@
 // Import packages
 const express = require("express");
+const path = require("path");
 const home = require("./routes/home");
 const index = require("./routes/index")
 
@@ -7,6 +8,7 @@ const index = require("./routes/index")
 const app = express();
 app.use(express.json());
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 // Routes
 app.use("/home", home);
 app.use("/", index);
