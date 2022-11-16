@@ -1,7 +1,8 @@
 const jwt = require("jsonwebtoken");
-const { Users } = require("../models/Model");
-const config = require("../src/core/config");
-const { hash, compare } = require("../src/helpers/Hash");
+const path = require("path");
+const { Users } = require(path.join(__dirname, "../models/Model"));
+const config = require(path.join(__dirname, "../src/core/config"));
+const { hash, compare } = require(path.join(__dirname, "../src/helpers/Hash"));
 
 async function create(email, username, name, password) {
   const hashedPassword = await hash(password);

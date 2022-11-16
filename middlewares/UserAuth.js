@@ -1,7 +1,8 @@
 const passport = require("passport");
 const passportJWT = require("passport-jwt");
-const config = require("../src/core/config");
-const userController = require("../controllers/UserController");
+const path = require("path");
+const config = require(path.join(__dirname, "../src/core/config"));
+const userController = require(path.join(__dirname, "../controllers/UserController"));
 
 const options = {
   jwtFromRequest: passportJWT.ExtractJwt.fromAuthHeaderWithScheme("jwt"),

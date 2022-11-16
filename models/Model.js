@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Users = require('./UserModel');
+const path = require("path");
+const Users = require(path.join(__dirname, './UserModel'));
 
 mongoose.connect(
   'mongodb+srv://mildew:mildewdatabase@sandbox0.m9dl512.mongodb.net/test',

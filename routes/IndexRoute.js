@@ -1,7 +1,8 @@
 const express = require("express");
+const path = require("path");
 const router = express.Router();
 
-const { getIndex } = require("../controllers/IndexController")
+const { getIndex } = require(path.join(__dirname, "../controllers/IndexController"));
 
 router.get("/", getIndex);
 
