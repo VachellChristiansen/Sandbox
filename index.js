@@ -7,7 +7,7 @@ const index = require("./routes/index")
 const app = express();
 app.use(express.json());
 app.set('view engine', 'ejs');
-app.set('views', './views')
+app.set('views', '/views')
 // Routes
 app.use("/home", home);
 app.use("/", index);
