@@ -9,7 +9,7 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 // Routes
 app.use("/home", home);
-app.use("/", index)
+app.use("/", index);
 // connection for local server
 const port = process.env.PORT || 9001;
 app.listen(port, () => console.log(`Listening to port ${port}`));
