@@ -1,6 +1,7 @@
 // Import packages
 const express = require("express");
 const home = require("./routes/home");
+const index = require("./routes/index")
 
 // Middlewares
 const app = express();
@@ -8,11 +9,7 @@ app.use(express.json());
 
 // Routes
 app.use("/home", home);
-
-app.get("/", async (req, res) => {
-  res.render("index")
-});
-
+app.use("/", index)
 // connection for local server
 const port = process.env.PORT || 9001;
 app.listen(port, () => console.log(`Listening to port ${port}`));
