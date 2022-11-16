@@ -6,7 +6,7 @@ const index = require("./routes/index")
 // Middlewares
 const app = express();
 app.use(express.json());
-
+app.set('view engine', 'ejs');
 // Routes
 app.use("/home", home);
 app.use("/", index)
