@@ -10,6 +10,7 @@ const index = require(path.join(__dirname, "./routes/IndexRoute"));
 // Middlewares
 app.use(express.json());
 app.set('view engine', 'ejs');
+app.engine('ejs', require('ejs').__express);
 app.set('views', path.join(__dirname, 'views'));
 // Routes
 app.use("/", index);
