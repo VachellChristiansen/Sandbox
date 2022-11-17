@@ -62,10 +62,7 @@ const createUser = async (req, res, next) => {
 }
 
 const getUser = async (req, res) => {
-  res.json({
-    status: 'OK',
-    email: req.user.email,
-  }).status(200);
+  res.render("User/mainUser").status(200);
 }
 
 const loginUser = async (req, res, next) => {
@@ -87,6 +84,18 @@ const loginUser = async (req, res, next) => {
   }
 }
 
+const getOtherUser = async (req, res, next) => {
+  res.render("User/otherUser")
+};
+
+const register = async (req, res, next) => {
+  res.render("User/otherUser")
+};
+
+const loginPage = async (req, res, next) => {
+  res.render("User/login")
+};
+
 module.exports = {
   create,
   createUser,
@@ -96,4 +105,8 @@ module.exports = {
   login,
   generateToken,
   findById,
+  // pages
+  getOtherUser,
+  register,
+  loginPage,
 };

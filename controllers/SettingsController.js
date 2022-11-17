@@ -2,19 +2,23 @@ const path = require("path");
 const { Users } = require(path.join(__dirname, "../models/Model"));
 
 const changePass = async (req, res, next) => {
-  res.render("setting/change-pass")
+  res.render("Settings/changePass")
 };
 
 const editProfile = async (req, res, next) => {
-  res.render("setting/edit-profile")
+  res.render("Settings/editProfile")
 };
 
 const help = async (req, res, next) => {
-  res.render("setting/help")
+  res.render("Settings/help")
 };
 
 const manageAccount = async (req, res, next) => {
-  res.render("setting/manage-account")
+  res.render("Settings/manageAccount")
+};
+
+const privacy = async (req, res, next) => {
+  res.render("Settings/privacy")
 };
 
 const updateProfile = async (req, res, next) => {

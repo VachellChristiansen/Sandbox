@@ -5,11 +5,11 @@ const userAuth = require(path.join(__dirname, "../middlewares/UserAuth"));
 
 const { changePass, editProfile, help, manageAccount, updateProfile } = require(path.join(__dirname, "../controllers/SettingsController"))
 
-router.get('/change-pass', changePass);
-router.get('/edit-profile', editProfile);
+router.get('/changepass', changePass);
+router.get('/editprofile', editProfile);
 router.get('/help', help);
-router.get('/manage-account', manageAccount);
+router.get('/manageaccount', manageAccount);
 
-router.post('/update-profile', userAuth, updateProfile);
+router.post('/updateprofile', userAuth, updateProfile);
 
 module.exports = router;
