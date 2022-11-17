@@ -6,6 +6,7 @@ const config = require(path.join(__dirname, "./src/core/config"));
 // Import Routes
 const user = require(path.join(__dirname, "./routes/UserRoute"));
 const index = require(path.join(__dirname, "./routes/IndexRoute"));
+const setting = require(path.join(__dirname, "./routes/SettingsRoute"));
 
 // Middlewares
 app.use(express.json());
@@ -15,6 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 // Routes
 app.use("/", index);
 app.use("/user", user);
+app.use("/setting", setting);
 // connection for local server
 const port = process.env.PORT || 9001;
 app.listen(port, () => console.log(`Listening to port ${port}`));
