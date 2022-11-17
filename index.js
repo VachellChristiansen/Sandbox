@@ -16,7 +16,7 @@ app.engine('ejs', require('ejs').__express);
 app.set('views', path.join(__dirname, 'views'));
 // Routes
 app.use("/", index);
-app.use("/user", user);
+app.use("/user", user); // will need to be changed to the main user's username
 app.use("/setting", setting);
 // connection for local server
 const port = process.env.PORT || 9001;

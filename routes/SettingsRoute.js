@@ -5,6 +5,8 @@ const userAuth = require(path.join(__dirname, "../middlewares/UserAuth"));
 
 const { changePass, editProfile, help, manageAccount, updateProfile } = require(path.join(__dirname, "../controllers/SettingsController"))
 
+// route here starts with "localhost/setting/"
+
 router.get('/changepass', changePass);
 router.get('/editprofile', editProfile);
 router.get('/help', help);

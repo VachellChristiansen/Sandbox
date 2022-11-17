@@ -89,7 +89,7 @@ const getOtherUser = async (req, res, next) => {
 };
 
 const register = async (req, res, next) => {
-  res.render("User/otherUser")
+  res.render("User/register")
 };
 
 const loginPage = async (req, res, next) => {

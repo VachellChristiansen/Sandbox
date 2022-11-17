@@ -14,16 +14,18 @@ const { getUser,
 
 const router = express.Router();
 
+// route here starts with "localhost/user/"
+
 router.get("/", userAuth, getUser);
 
-router.get("/user", getOtherUser);
+router.get("/user", getOtherUser); // will need to be changed to other user name
 
 router.get("/register", register);
 
 router.get("/login", loginPage);
 
-router.post("/register", celebrate(userValidator.register), createUser);
+router.post("/createUser", celebrate(userValidator.register), createUser);
 
-router.post("/login", celebrate(userValidator.login), loginUser)
+router.post("/loginValidation", celebrate(userValidator.login), loginUser)
 
 module.exports = router;
