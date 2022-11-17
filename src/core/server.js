@@ -37,7 +37,7 @@ app.use((err, req, res, next) => {
       })
       .end();
   }
-
+  
   return res.status(err.status || 500)
     .send({
       statusCode: err.status || 500,
