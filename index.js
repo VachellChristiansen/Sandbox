@@ -14,10 +14,11 @@ app.use(express.json());
 app.set('view engine', 'ejs');
 app.engine('ejs', require('ejs').__express);
 app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 // Routes
 app.use("/", index);
 app.use("/user", user); // will need to be changed to the main user's username
 app.use("/setting", setting);
 // connection for local server
 const port = process.env.PORT || 9001;
-app.listen(port, () => console.log(`Listening to port ${port}`));
+app.listen(port, () => console.log(`Listening to port ${port} + ${ path.join(__dirname) }`));

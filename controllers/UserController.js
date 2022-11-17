@@ -62,7 +62,7 @@ const createUser = async (req, res, next) => {
 }
 
 const getUser = async (req, res) => {
-  res.render("User/mainUser").status(200);
+  res.render("User/mainUser");
 }
 
 const loginUser = async (req, res, next) => {

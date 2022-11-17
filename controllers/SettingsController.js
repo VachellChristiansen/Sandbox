@@ -53,5 +53,6 @@ module.exports = {
   editProfile,
   help,
   manageAccount,
+  privacy,
   updateProfile
 }

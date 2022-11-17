@@ -16,9 +16,9 @@ const router = express.Router();
 
 // route here starts with "localhost/user/"
 
-router.get("/", userAuth, getUser);
+router.get("/", getUser); // add userAuth when session data is available
 
-router.get("/user", getOtherUser); // will need to be changed to other user name
+router.get("/otheruser", getOtherUser); // will need to be changed to other user username
 
 router.get("/register", register);
 
