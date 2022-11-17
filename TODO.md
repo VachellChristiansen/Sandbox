@@ -5,7 +5,7 @@ Do the things in todo, move the todo to in progress if you're doing it, then put
 ### Todo
 
 - [ ] Merge Setting files
-- [ ] 
+- [ ] Change pathing from img to assets, move all files from img to assets
 
 ### In Progress
 
