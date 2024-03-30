@@ -11,15 +11,3 @@
 ### Step 5: If there are problems with vercel, create the fix and push it again
 
 ### Step 6: After fixing the problem, push the project to the backup repository
-
-# Project Devs:
-
-### 535210001 - Fenny Jong
-
-### 535210006 - Vachell Christiansen Chai
-
-### 535210018 - Naramia Wijaya
-
-### 535210036 - Valerie Vanora Susilo
-
-### 535210046 - Andrew
